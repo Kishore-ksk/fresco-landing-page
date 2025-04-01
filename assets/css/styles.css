@@ -54,13 +54,16 @@ a{
 }
 
 .navbar-nav .nav-link:hover {
-  background-color: #626262; /* Custom hover color */
-  color: #000; /* Adjust text color if needed */
+  background-color: #626262;
+  color: #000; 
 }
 
 .navbar-nav .nav-link.active {
-  background-color: #113946; /* Custom active color */
+  background-color: #113946; 
   color: #fff;
+}
+.navigation span{
+  cursor: pointer;
 }
 .menu-heading{
   color: #113946;

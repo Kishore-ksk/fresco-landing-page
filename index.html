@@ -62,7 +62,7 @@
               </a>
             </li>
           </ul>
-          <div class="d-flex flex-row align-items-center" role="search">
+          <div class="navigation d-flex flex-row align-items-center" role="search">
             <span class="material-symbols-outlined text-light me-4 fs-3">
               search
             </span>
@@ -380,7 +380,7 @@
 
 
     <!-- branch section -->
-    <div class="container">
+    <div id="scrollspyHeading2" class="container">
       <h2 class="fw-bold mb-4">Our Branches</h2>
       <div class="row g-4">
         <div class="col-lg-6 d-flex branch-container">
@@ -626,23 +626,20 @@
         with us. Enjoy our freshly brewed coffee and warm ambiance, hassle-free</p>
 
 
-      <form class="container needs-validation" novalidate>
-
+      <form class="container needs-validation" novalidate data-modal-target="bookingModal">
         <div class="mt-5 row row-cols-lg-4 row-cols-md-2 row-cols-1 g-3 row-gap-md-4 row-gap-2">
           <div class="col">
-            <label for="validationCustom01" class="form-label">Name</label>
+            <label for="name" class="form-label">Name</label>
             <input type="text" class="form-control"
-              style="background-color: transparent; border: 2px solid #113946; border-radius: 0px;"
-              id="validationCustom01" value="" required placeholder="Enter Name">
-            <div class="invalid-feedback">
-              Enter Your Name
-            </div>
+              style="background-color: transparent; border: 2px solid #113946; border-radius: 0px;" id="name" required
+              placeholder="Enter Name">
+            <div class="invalid-feedback">Enter Your Name</div>
           </div>
           <div class="col">
-            <label for="validationCustom04" class="form-label">No.of Person</label>
+            <label for="persons" class="form-label">No. of Persons</label>
             <select class="form-select"
-              style="background-color: transparent; border: 2px solid #113946; border-radius: 0px;"
-              id="validationCustom04" required>
+              style="background-color: transparent; border: 2px solid #113946; border-radius: 0px;" id="persons"
+              required>
               <option selected disabled value="">Choose...</option>
               <option>1</option>
               <option>2</option>
@@ -650,54 +647,46 @@
               <option>4</option>
               <option>5-10</option>
             </select>
-            <div class="invalid-feedback">
-              Please select count.
-            </div>
+            <div class="invalid-feedback">Please select count.</div>
           </div>
           <div class="col">
-            <label for="validationCustom04" class="form-label">Location</label>
+            <label for="location" class="form-label">Location</label>
             <select class="form-select"
-              style="background-color: transparent; border: 2px solid #113946; border-radius: 0px;"
-              id="validationCustom04" required>
+              style="background-color: transparent; border: 2px solid #113946; border-radius: 0px;" id="location"
+              required>
               <option selected disabled value="">Choose...</option>
               <option>Nungambakkam</option>
               <option>Adyar</option>
               <option>Anna Nagar</option>
               <option>Velachery</option>
             </select>
-            <div class="invalid-feedback">
-              Please select Location.
-            </div>
+            <div class="invalid-feedback">Please select Location.</div>
           </div>
           <div class="col">
-            <label for="validationCustom04" class="form-label">Reservation Duration</label>
+            <label for="duration" class="form-label">Reservation Duration</label>
             <select class="form-select"
-              style="background-color: transparent; border: 2px solid #113946; border-radius: 0px;"
-              id="validationCustom04" required>
+              style="background-color: transparent; border: 2px solid #113946; border-radius: 0px;" id="duration"
+              required>
               <option selected disabled value="">Choose...</option>
               <option>1 Hour</option>
               <option>2 Hours</option>
-              <option>3 hours</option>
+              <option>3 Hours</option>
             </select>
-            <div class="invalid-feedback">
-              Please select Duration.
-            </div>
+            <div class="invalid-feedback">Please select Duration.</div>
           </div>
-
-
         </div>
         <div class="text-center mt-4">
-          <button class="btn my-style-btn-secondary px-4 py-2 fw-semibold" type="submit" data-bs-toggle="modal"
-            data-bs-target="#exampleModal">Book a Table</button>
-
+          <button id="submitBtn" class="btn my-style-btn-secondary px-4 py-2 fw-semibold" type="submit">
+            Book a Table
+          </button>
         </div>
       </form>
 
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Your Table is Ready!</h1>
+              <h1 class="modal-title fs-5" id="bookingModalLabel">Your Table is Ready!</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body d-flex align-items-center flex-column">
@@ -896,57 +885,66 @@
 
 
     <!-- contact us section -->
-    <div class="container-fluid p-5" style="background-color: #113946;" id="scrollspyHeading7">
-      <div class="container  text-light">
+    <div class="container-fluid p-5 needs-validation input-style mt-5" novalidate data-modal-target="contactModal"
+      style="background-color: #113946;" id="scrollspyHeading7">
+      <div class="container text-light">
         <h1 class="d-block d-lg-none mb-4">Contact Us</h1>
         <div class="row d-flex align-items-center">
-          <div class="col-lg-6 col-12 me-lg-5"><img src="https://picsum.photos/id/156/700/700" class="img-fluid" alt="">
+          <div class="col-lg-6 col-12 me-lg-5">
+            <img src="assets/images/contactUs.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-5 col-12 pt-4 pt-lg-0">
             <h1 class="d-none d-lg-block">Contact Us</h1>
             <p class="mb-4">We’d love to hear from you! Whether you have a question, feedback, or just want
-              to
-              say hello,
-              reach out to us using the options below:
+              to say hello, reach out to us using the options below:
             </p>
             <p class="fs-6s"><span class="fw-bold">PHONE</span> : &NonBreakingSpace; 034-2388-6752</p>
-            <p class="fs-6s"><span class="fw-bold">EMAIL</span> : &NonBreakingSpace; frescocare@gmail.com
-            </p>
-            <p class="fs-6s mb-5"><span class="fw-bold">BUSINESS HOURS</span> : &NonBreakingSpace;
-              09:00AM-11:00PM
-            </p>
-            <form class="row g-3 needs-validation input-style mt-5" novalidate>
-              <div class="col-md-6">
-                <input type="text" class="form-control text-light" id="validationCustom01"
-                  style="background-color: transparent; border: 2px solid #F2EAD3; border-radius: 0px;"
-                  placeholder="Name" value="" required>
-                <div class="invalid-feedback">
-                  Enter Your Name
-                </div>
-              </div>
-              <div class="col-md-6">
-                <input type="text" class="form-control text-light" id="validationCustom02"
-                  style="background-color: transparent; border: 2px solid #F2EAD3; border-radius: 0px;"
-                  placeholder="Email Address" value="" required>
-                <div class="invalid-feedback">
-                  Enter Your Email
-                </div>
-              </div>
+            <p class="fs-6s"><span class="fw-bold">EMAIL</span> : &NonBreakingSpace; frescocare@gmail.com</p>
+            <p class="fs-6s mb-5"><span class="fw-bold">BUSINESS HOURS</span> : &NonBreakingSpace; 09:00AM-11:00PM</p>
 
+            <form class="row g-3 needs-validation input-style mt-5" novalidate id="contactForm">
+              <div class="col-md-6">
+                <input type="text" class="form-control text-light" id="contactName"
+                  style="background-color: transparent; border: 2px solid #F2EAD3; border-radius: 0px;"
+                  placeholder="Name" required>
+                <div class="invalid-feedback">Enter Your Name</div>
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control text-light" id="contactEmail"
+                  style="background-color: transparent; border: 2px solid #F2EAD3; border-radius: 0px;"
+                  placeholder="Email Address" required>
+                <div class="invalid-feedback">Enter a valid Email</div>
+              </div>
               <div class="col-md-12">
-
-                <textarea class="form-control text-light" id="validationTextarea"
+                <textarea class="form-control text-light" id="contactMessage"
                   style="background-color: transparent; border: 2px solid #F2EAD3; border-radius: 0px;"
                   placeholder="Message" required></textarea>
-                <div class="invalid-feedback">
-                  Please enter a message in the textarea.
-                </div>
+                <div class="invalid-feedback">Please enter a message.</div>
               </div>
               <div class="col-12 mt-4">
-                <button class="btn my-style-btn-primary  fw-semibold" type="submit">Get In
-                  Touch</button>
+                <button class="btn my-style-btn-primary fw-semibold" type="submit">
+                  Get In Touch
+                </button>
               </div>
             </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--contact us Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel">Message Sent</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Thank you for contacting us! We’ll get back to you soon.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -979,17 +977,35 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll("form.needs-validation").forEach(form => {
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          if (form.checkValidity()) {
+            let modalId = form.getAttribute("data-modal-target");
+            let modal = new bootstrap.Modal(document.getElementById(modalId));
+            modal.show();
+            form.reset();
+          } else {
+            form.classList.add("was-validated");
+          }
+        });
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
       const navLinks = document.querySelectorAll(".nav-link, .navbar-brand, .my-style-button");
       const navbarCollapse = document.querySelector(".navbar-collapse");
 
       navLinks.forEach(link => {
         link.addEventListener("click", () => {
-          if (window.innerWidth < 992) { // Close only on mobile
+          if (window.innerWidth < 992) {
             navbarCollapse.classList.remove("show");
           }
         });
       });
     });
+
 
   </script>
 
