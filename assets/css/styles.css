@@ -1,0 +1,328 @@
+body{
+  background-color: #EEEEEC;
+}
+a{
+  text-decoration: none;
+}
+.my-style-button{
+  
+  border: 2px solid #F2EAD3 ;
+  color: #F2EAD3 ;
+  border-radius: 4px;
+}
+.my-style-button:hover{
+  background-color: #F2EAD3 ;
+}
+.my-style-button a{
+  color: #F2EAD3 ;
+}
+.my-style-button:hover a {
+  color: #000 ;
+}
+.my-style-btn-primary{
+  background-color: #F2EAD3;
+  border-radius: 4px;
+}
+.my-style-btn-primary a{
+  color: #000;
+}
+.my-style-btn-primary:hover{
+  color: #000;
+  background-color: #dbd2bb;
+}
+.image-style{
+  filter: brightness(40%);
+}
+.my-style-btn-secondary{
+  background-color:#113946 ;
+  color: #fff;
+  border-radius: 4px;
+}
+.my-style-btn-secondary:hover{
+  background-color: #1d4653;
+  color: #fff;
+}
+.input-style input::placeholder{
+  color: #fff;
+}
+.input-style textarea::placeholder{
+  color: #fff;
+}
+
+.navbar-nav .nav-link {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #626262; /* Custom hover color */
+  color: #000; /* Adjust text color if needed */
+}
+
+.navbar-nav .nav-link.active {
+  background-color: #113946; /* Custom active color */
+  color: #fff;
+}
+.menu-heading{
+  color: #113946;
+  font-family: "Cormorant Garamond", serif;
+}
+.line{
+  width: 100%;
+  height: 1px;
+background-color: #113946;
+}
+.menu-content span{
+  color: #113946;
+}
+.menu-name{
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 800;
+  font-size: 16px;
+}
+.menu-price{
+  font-size: 16px;
+}
+.menu-desc{
+  font-size: 12px;
+}
+.menu-image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-bg-shape {
+  position: absolute;
+  top: -20px;
+  right: 100px;
+  width: 50%;
+  height: 100%;
+  z-index: 0;
+}
+
+.menu-image {
+  position: relative;
+  z-index: 1;
+  
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.branch-card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.branch-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.branch-details p {
+  margin-bottom: 5px;
+}
+.branch-name{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+  color: #113946;
+  font-weight: 800;
+}
+.branch-line{
+  width: 50%;
+  height: 2px;
+  background-color:#113946;
+}
+.brand-name{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 10px;
+}
+
+/* Extra Large Screens (xl) - 1200px and above */
+@media (max-width: 1920px) {
+  .carousel-item {
+    height: 90vh;
+  }
+  .text-1{
+    font-size: 24px;
+  }
+  .text-2{
+    font-size: 28px;
+  }
+  .text-3{
+    font-size: 20px;
+  }
+  .my-style-btn-primary{
+    font-size: 18px;
+  }
+  .my-style-button{
+    font-size: 18px;
+  }
+  .menu-name{
+    font-size: 24px;
+  }
+  .menu-price{
+    font-size: 24px;
+  }
+  .menu-desc{
+    font-size: 16px;
+  }
+  .branch-name{
+    font-size: 18px;
+  }
+  .branch-card p{
+    font-size: 14px;
+  }
+}
+
+/* Large Screens (lg) - 992px to 1199px */
+@media (max-width: 1200px) {
+  .carousel-item {
+    height: 80vh;
+  }
+  .text-1{
+    font-size: 22px;
+  }
+  .text-2{
+    font-size: 26px;
+  }
+  .text-3{
+    font-size: 18px;
+  }
+  .my-style-btn-primary{
+    font-size: 16px;
+  }
+  .my-style-button{
+    font-size: 16px;
+  }
+  .menu-name{
+    font-size: 24px;
+  }
+  .menu-price{
+    font-size: 24px;
+  }
+  .menu-desc{
+    font-size: 16px;
+  }
+  .branch-name{
+    font-size: 16px;
+  }
+  .branch-card p{
+    font-size: 12px;
+  }
+}
+
+/* Medium Screens (md) - 768px to 991px */
+@media (max-width: 992px) {
+  .carousel-item {
+    height: 75vh;
+  }
+  .text-1{
+    font-size: 20px;
+  }
+  .text-2{
+    font-size: 24px;
+  }
+  .text-3{
+    font-size: 16px;
+  }
+  .my-style-btn-primary{
+    font-size: 14px;
+  }
+  .my-style-button{
+    font-size: 14px;
+  }
+  .menu-name{
+    font-size: 24px;
+  }
+  .menu-price{
+    font-size: 24px;
+  }
+  .menu-desc{
+    font-size: 16px;
+  }
+  .branch-container{
+    height: 300px;
+  }
+}
+
+/* Small Screens (sm) - 576px to 767px */
+@media (max-width: 768px) {
+  .carousel-item {
+    height: 50vh;
+  }
+  .text-1{
+    font-size: 18px;
+  }
+  .text-2{
+    font-size: 22px;
+  }
+  .text-3{
+    font-size: 14px;
+  }
+  .my-style-btn-primary{
+    font-size: 12px;
+  }
+  .my-style-button{
+    font-size: 12px;
+  }
+  .menu-name{
+    font-size: 16px;
+  }
+  .menu-price{
+    font-size: 16px;
+  }
+  .menu-desc{
+    font-size: 12px;
+  }
+
+  .branch-container{
+    height: 300px;
+  }
+  .branch-name{
+    font-size: 16px;
+  }
+  .branch-card p{
+    font-size: 12px;
+  }
+}
+
+/* Extra Small Screens (xs) - Below 576px */
+@media (max-width: 576px) {
+  .carousel-item {
+    height: 40vh;
+  }
+  .text-1{
+    font-size: 16px;
+  }
+  .text-2{
+    font-size: 18px;
+  }
+  .text-3{
+    font-size: 12px;
+  }
+  .my-style-btn-primary{
+    font-size: 10px;
+  }
+  .my-style-button{
+    font-size: 10px;
+  }
+  .menu-name{
+    font-size: 16px;
+  }
+  .menu-price{
+    font-size: 16px;
+  }
+  .menu-desc{
+    font-size: 12px;
+  }
+  .branch-container{
+    height: 200px;
+  }
+  .branch-name{
+    font-size: 12px;
+  }
+  .branch-card p{
+    font-size: 8px;
+  }
+}
