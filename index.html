@@ -885,8 +885,8 @@
 
 
     <!-- contact us section -->
-    <div class="container-fluid p-5 needs-validation input-style mt-5" novalidate data-modal-target="contactModal"
-      style="background-color: #113946;" id="scrollspyHeading7">
+    <div class="container-fluid p-5 needs-validation input-style mt-5" novalidate style="background-color: #113946;"
+      id="scrollspyHeading7">
       <div class="container text-light">
         <h1 class="d-block d-lg-none mb-4">Contact Us</h1>
         <div class="row d-flex align-items-center">
@@ -902,7 +902,8 @@
             <p class="fs-6s"><span class="fw-bold">EMAIL</span> : &NonBreakingSpace; frescocare@gmail.com</p>
             <p class="fs-6s mb-5"><span class="fw-bold">BUSINESS HOURS</span> : &NonBreakingSpace; 09:00AM-11:00PM</p>
 
-            <form class="row g-3 needs-validation input-style mt-5" novalidate id="contactForm">
+            <form class="row g-3 needs-validation input-style mt-5" novalidate data-modal-target="contactModal"
+              id="contactForm">
               <div class="col-md-6">
                 <input type="text" class="form-control text-light" id="contactName"
                   style="background-color: transparent; border: 2px solid #F2EAD3; border-radius: 0px;"
@@ -979,15 +980,15 @@
     document.addEventListener("DOMContentLoaded", function () {
       document.querySelectorAll("form.needs-validation").forEach(form => {
         form.addEventListener("submit", function (event) {
-          event.preventDefault();
+          event.preventDefault(); // Prevent form submission
 
           if (form.checkValidity()) {
-            let modalId = form.getAttribute("data-modal-target");
+            let modalId = form.getAttribute("data-modal-target"); // Get the modal ID from the form
             let modal = new bootstrap.Modal(document.getElementById(modalId));
-            modal.show();
-            form.reset();
+            modal.show(); // Show the corresponding modal
+            form.reset(); // Reset form after submission
           } else {
-            form.classList.add("was-validated");
+            form.classList.add("was-validated"); // Show validation feedback
           }
         });
       });
